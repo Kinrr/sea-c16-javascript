@@ -1,0 +1,26 @@
+<script>
+	var FirstName
+	var LastName
+
+	preferredName = function(FirstName, LastName) {
+		if (FirstName === "" || FirstName === undefined) {
+			if (LastName === "" || LastName === undefined) {
+				return false;
+			}
+			else {
+				return LastName;
+			}
+		}
+		else if (LastName === "" || LastName === undefined) {
+			if (FirstName === "" || FirstName === undefined) {
+				return false;
+			}
+			else {
+				return FirstName;
+			}
+		}
+		else {
+			return false;
+		}
+	}	
+</script>

@@ -1,0 +1,22 @@
+var Person = function (name, parentName, age)	{
+	this.name = name;
+	this.parentName = parentName;
+	this.age = age;
+	this.isDead = function() {
+		if (!this.age || this.age > 115){
+			console.log(!this.age || this.age > 115)
+		}
+			else{
+				console.log(!this.age)
+			}
+	}
+	this.isAlive =function(){
+		if (!!this.age && this.age < 116){
+			console.log(true)
+		}
+			else{
+				console.log(false)
+			}
+	}
+
+}

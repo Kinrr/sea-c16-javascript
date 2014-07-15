@@ -2,9 +2,9 @@ function preferredName (firstName, lastName) {
   if(!firstName === !lastName) {
   return false;
   } else if (!firstName || !lastName) {
-      return firstName + lastName;
+      return firstName || lastName;
   } else {
-      return " ";
+      return false;
   }
   
   {
