@@ -1,0 +1,32 @@
+<html>
+<head>
+  <script>
+    // Takes a string and returns an array of tokens in a string delimited by a specified separator
+    function stringDelimiter(aString,aDelimiter) {
+      var delimitedArray = [];
+      var token = "";
+      for (i=0;i<aString.length;i++) {
+        if (aString[i] === aDelimiter) {
+          if (token != "") {
+            delimitedArray.push(token);
+          }
+          token = "";
+	}
+        else {
+          token += aString[i];
+        }
+      }
+
+      return delimitedArray;
+    };
+
+    var sampleInput = 'asdf$lskd1234$asdo$$$';
+    console.log(stringDelimiter(sampleInput, '$'));
+    console.log(stringDelimiter('abc$defg$hi$j','$'));
+    console.log(stringDelimiter('*123*Happy*Joy*','*'));
+  </script>
+</head>
+<body>
+</body>
+</html>
+

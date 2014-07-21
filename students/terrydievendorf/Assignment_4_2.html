@@ -1,0 +1,12 @@
+    function countDecorator(f) {
+      var counter=0;
+      function decorator() {
+        console.log(f.apply(this, arguments));
+        return counter++;
+      }
+      decorator.callCount = function() {
+        return counter;
+      }
+      return decorator;
+    }
+

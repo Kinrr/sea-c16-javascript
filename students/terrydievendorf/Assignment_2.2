@@ -1,7 +1,8 @@
 // This function takes a first name and a last name and returns an exclusive or of the two names.
     function preferredName(firstname,lastname) {
-      if (firstname && !lastname) return firstname;
-      if (lastname && !firstname) return lastname;
+      return (!!firstname == !!lastname) ? false : (firstname || lastname);
+      // if (firstname && !lastname) return firstname;
+      // if (lastname && !firstname) return lastname;
       return false;
     };
 

@@ -4,7 +4,7 @@ function Person(name, parent1, parent2, age) {
 	this.parent2 = parent2;
 	this.age = age;
 	this.isAlive = function(){
-		return !!((116 > this.age && this.age > -1) && this.age)
+		return !!((116 > this.age && this.age > 0) && this.age)
 	}
 	this.isDead = function(){
 		return !this.isAlive();

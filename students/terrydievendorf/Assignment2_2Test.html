@@ -2,9 +2,10 @@
 <head>
   <script>
     function preferredName(firstname,lastname) {
-      if (firstname && !lastname) return firstname;
-      if (lastname && !firstname) return lastname;
-      return false;
+      return (!!firstname == !!lastname) ? false : (firstname || lastname);
+//      if (firstname && !lastname) return firstname;
+//      if (lastname && !firstname) return lastname;
+//      return false;
     };
     var firstname;
     var lastname;

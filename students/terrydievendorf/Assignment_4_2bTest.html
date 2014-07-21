@@ -1,0 +1,32 @@
+<html>
+<head>
+  <script>
+    function Add(x, y) {
+      return x + y;
+    }
+
+    function countDecorator(f) {
+      var counter=0;
+      function decorator() {
+        console.log(f.apply(this, arguments));
+        return counter++;
+      }
+      decorator.callCount = function() {
+        return counter;
+      }
+      return decorator;
+    }
+
+    var Add = countDecorator(Add);
+    Add(1, 1);
+    console.log('Call Count ' + Add.callCount());
+    Add(2, 2);
+    console.log('Call Count ' + Add.callCount());
+    Add(1, 2);
+    console.log('Call Count ' + Add.callCount());
+  </script>
+</head>
+<body>
+</body>
+</html>
+

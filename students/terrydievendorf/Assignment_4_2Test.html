@@ -1,0 +1,27 @@
+<html>
+<head>
+  <script>
+    function Add(x, y) {
+      return x + y;
+    }
+
+    function countDecorator(f) {
+      var counter=1;
+      return function() {
+	console.log(counter++);
+      }
+    }
+
+    var Add = countDecorator(Add);
+    var Add2 = countDecorator(Add2);
+    Add(1, 1);
+    Add(2, 2);
+    Add(1, 2);
+    Add2(1,1);
+    Add2(2,4);
+  </script>
+</head>
+<body>
+</body>
+</html>
+

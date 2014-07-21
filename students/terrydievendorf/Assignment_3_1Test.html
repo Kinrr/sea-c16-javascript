@@ -1,0 +1,32 @@
+<html>
+<head>
+<script>
+var Person = function(name,parentName,age) {
+  this.name = name;
+  this.parentName = !!parentName;
+  this.age = !!age?age:0;
+}
+Person.prototype.isAlive = function() {
+  return (this.age>0)&&(this.age<115);
+}
+Person.prototype.isDead = function() {
+  return !this.isAlive();
+}
+
+var p = new Person('Terry','Nelson',5);
+console.log(p);
+console.log(p.isDead());
+console.log(p.isAlive());
+var q = new Person('John','Wes');
+console.log(q);
+console.log(q.isDead());
+console.log(q.isAlive());
+var r = new Person('Al');
+console.log(r);
+console.log(r.isDead());
+console.log(r.isAlive());
+</script>
+</head>
+<body>
+</body>
+</html>
