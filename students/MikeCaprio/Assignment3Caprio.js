@@ -1,35 +1,29 @@
-//Here's the sample input, but it works for other delimiters if you change
-//the contents of this string
 
 var sampleInput = "asdf$lskd1234$asdo$$$";
 
 var stringDelimiter = function (text, delimiter) {
 
-  //Create an empty array. I hear this is bad but I don't know how to create
-  //and push to this in the same line (22)
-
   var solutionArray = [];
   var index = 0;
   for (i = 0; i <= text.length; i++) {
-
-    //This keeps multiple delimiters in a row from causing trouble by skipping
-    //them until we arrive at a valid starting point for splicing
 
     if (text.charAt(index) === delimiter){
       index += 1;
     }
 
-    //This grabs all the chars from our valid start (0, or the first char after
-    //a delimiter that's not itself a delimiter) up to (but not including)
-    //the next delimiter and pushes them into a new cell in our array
-
     else if (text.charAt(i) === delimiter) {
       solutionArray.push(text.slice(index,i));
       index = i+1;
       }
-  }
 
-  //debug
+//New addition - now checks to see if the end of the string is reached and if so pushes
+//the last slice of text into the array - since the string may not always end in a
+//delimiter
+  
+    else if (i===text.length) {
+      solutionArray.push(text.slice(index,i));
+    }
+  }
 
   console.log(solutionArray);
 }
