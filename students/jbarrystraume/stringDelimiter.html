@@ -1,0 +1,27 @@
+<script>
+	var arr, input, output, divider;
+	var sampleInput = 'asdf$lskd1234$asdo$$$';
+
+	var stringDelimiter = function(input, divider) {
+		input = input.toString();
+		divider = divider.toString();
+		arr = [];
+		output = '';
+		
+		for (i = 0; i < input.length; i++) {
+			if (input[i] === divider) {
+				if (output !== '') {
+					arr.push(output);
+				}
+				output = '';
+			}
+			if (input[i] !== divider) {
+				output += input[i];
+				if (i === input.length - 1) {
+					arr.push(output);
+				}
+			}
+		}
+		return arr;
+	}
+</script>

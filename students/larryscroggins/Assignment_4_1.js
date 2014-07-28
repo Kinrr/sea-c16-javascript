@@ -9,14 +9,15 @@ stringDelimiter = function(sampleInput, stringSeparator) {
     if (sampleInput.charAt(i) === stringSeparator) {
       var static = i;
       var arrElement = sampleInput.substring(match, i);
-      if (arrElement !== "") {
+      if (arrElement !== false) {
         array.push(arrElement);
       }
       match = static + 1;
     }
   }
-  if (sampleInput.charAt(len) != stringSeparator) {
+  if (sampleInput.charAt(len) !== stringSeparator) {
     array.push(sampleInput.substring(match, len));
   }
+  array = array.filter(Boolean);
   return array;
 }

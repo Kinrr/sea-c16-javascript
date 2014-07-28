@@ -1,0 +1,182 @@
+/*
+ *    Base Elements
+ *
+ */
+
+body{
+    font-family:Arial,sans-serif;
+    font-size:13px;
+}
+div{
+    position:relative;
+}
+div,h1,h2,h3,h4,h5,ul,ol,p{
+    margin:0px;
+    padding:0px;
+    border:0px;
+}
+a{
+    color:#000;
+    font-size:1em;
+    text-decoration:none;
+}
+em{
+    font-style:italic;
+    color:#777;
+    font-weight:normal;
+    font-size:.9em;
+}
+ul{
+    list-style:none;
+}
+ol{
+    list-style:decimal inside;
+}
+.clear{
+    clear:both;
+    width:100%;
+    height:0;
+    border:0;
+    margin:0;
+    padding:0;
+}
+/*
+ *    Containers
+ *
+ */
+
+#wrapper{
+    width:100%;
+    max-width:900px;
+    min-width:600px;
+    margin:20px auto;
+}
+#nav{
+    position:relative;
+    float:left;
+    margin:0 auto 0 4px;
+    background-image: -webkit-gradient(
+    	linear,
+    	left top,
+    	right top,
+    	color-stop(0, #3A6DAB),
+    	color-stop(1, #36A375)
+    );
+    background-image: -o-linear-gradient(right, #3A6DAB 0%, #36A375 100%);
+    background-image: -moz-linear-gradient(right, #3A6DAB 0%, #36A375 100%);
+    background-image: -webkit-linear-gradient(right, #3A6DAB 0%, #36A375 100%);
+    background-image: -ms-linear-gradient(right, #3A6DAB 0%, #36A375 100%);
+    background-image: linear-gradient(to right, #3A6DAB 0%, #36A375 100%);
+}
+    #marker{
+        position:absolute;
+        height:0px;
+        border-bottom:4px solid transparent;
+        border-left:4px solid transparent;
+        border-right:4px solid transparent;
+        -webkit-transition: all 200ms ease-out;
+        -moz-transition: all 200ms ease-out;
+        -ms-transition: all 200ms ease-out;
+        -o-transition: all 200ms ease-out;
+        transition: all 200ms ease-out;
+    }
+        #stem{
+            width:4px;
+            height:14px;
+            margin:4px auto 0 auto;
+        }
+#content{
+    clear:both;
+    margin-top:10px;
+}
+
+/*
+ *    Navigation Items
+ *
+ */
+
+#nav ul li{
+    display:inline;
+    float:left;
+    margin:0;
+    height:44px;
+}
+#nav ul li a{
+    display:block;
+    height:40px;
+    line-height:40px;
+    padding:0 20px;
+    border-top:4px solid rgba(255,255,255,1);
+    border-right:4px solid rgba(255,255,255,1);
+    border-bottom:0;
+    color:rgba(255,255,255,1);
+    letter-spacing:1px;
+    background:rgba(23,86,110,.3);
+    /*------------------------------------*/
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -ms-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+    #nav ul li a:hover{
+        background:rgba(255,255,255,.3);
+    }
+    #nav ul li a.active{
+        background:rgba(255,255,255,.3);
+    }
+
+/*
+ *    Page Content
+ *
+ */
+
+div.tab-content{
+    display:none;
+    min-height:400px;
+    box-sizing:border-box;
+    padding:20px;
+    border-top:4px solid transparent;
+    border-bottom:4px solid transparent;
+    background:#fff;
+    color:rgba(50,50,50,1);
+    clear:both;
+    opacity:0;
+
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -ms-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+    .active.tab-content:nth-child(1){
+        border:4px solid rgba(117, 153, 196, 1);
+        background:rgba(117, 153, 196, .2);
+    }
+    .active.tab-content:nth-child(2){
+        border:4px solid rgba(116, 164, 185, 1);
+        background:rgba(116, 164, 185, .2)
+    }
+    .active.tab-content:nth-child(3){
+        border:4px solid rgba(116, 171, 178, 1);
+        background:rgba(116, 171, 178, .2)
+    }
+    .active.tab-content:nth-child(4){
+        border:4px solid rgba(116, 179, 170, 1);
+        background:rgba(116, 179, 170, .2)
+    }
+    .active.tab-content:nth-child(5){
+        border:4px solid rgba(115, 187, 162, 1);
+        background:rgba(115, 187, 162, .2)
+    }
+div.tab-content.active{
+    display:block;
+    opacity:1;
+}
+.tab-content h3{
+    margin-top:10px;
+}
+.tab-content ol li{
+    font-size:1em;
+    line-height:20px;
+}

@@ -1,0 +1,31 @@
+<script>
+	var name, parName, age;
+
+	var Person = function(name, parName, age) {
+		this.name = name;
+		this.parName = parName;
+		this.age = age
+
+		console.log(this.name " " + this.parName + " is " + this.age + " years old.");
+		
+		this.isDead = function() {
+			if(!age) {
+				console.log(this.name + " " + this.parName + " is dead.");
+				return true;
+			} else {
+				console.log(this.name + " " + this.parName + " is not dead.");
+				return false;
+			}
+		}
+
+		this.isAlive = function() {
+			if (this.age >= 0 && this.age <= 120) {
+				console.log(this.name + " " + this.parName + " is alive.");
+				return true;
+			} else {
+				console.log(this.name + " " + this.parName + " is not alive.");
+				return false;
+			}
+		}
+	}
+</script>	

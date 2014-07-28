@@ -1,0 +1,65 @@
+a {
+  text-decoration: none;
+  padding: 2px;
+  color: black;
+}
+
+#box {
+ border: 1px solid;
+ padding: 10px 2px 2px;
+ background-color: #0000db;
+ width: 500px;
+ height: 300px;
+ border-radius: 0.5em;
+}
+
+header {
+  background-color: #000050;
+}
+
+header h1 {
+  color: white;
+  font-family: "Trebuchet MS";
+  padding: 10px;
+}
+
+#tabs ul {
+  list-style: none;
+  padding:0;
+  margin:0;
+  font-family: "Arial Black";
+}
+
+#tabs li {
+  float: left;
+  border: 1px outset black;
+  border-bottom-width: 0;
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+  margin: 0 0 0 1em;
+  background-color: #d2d2d2;
+}
+
+#tabs li:hover {
+  background-color: white;
+}
+
+#content {
+  border: 1px solid;
+  clear: both;
+  background-color: #e8e8e8;
+  font-family: "Trebuchet MS";
+  height: 278px;
+  border-radius: 0.5em;
+  padding-left: 5px;
+}
+
+.selected {
+  position: relative;
+  top: 1px;
+  border-top: 1px outset black;
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+  background-color: #e8e8e8;
+}
+

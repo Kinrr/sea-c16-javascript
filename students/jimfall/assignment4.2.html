@@ -1,0 +1,41 @@
+<script>
+// Implement a decorator function that takes 
+// a function as an argument and will track
+// how many times the passed function was called.
+// a lot of credit goes to 
+// http://javascript.info/tutorial/decorators
+// which was the foundation of understanding and writing the code for 
+// my decorator function
+
+function Add(x, y) {
+  return x + y;
+}
+
+function countDecorator (add){
+  //create our count variable which our nested wrapper function will call to increment
+  //everytime our add function is called
+  var count = 0;
+  
+  function wrapper(){
+    //when our countDecorator function is called, we return our wrapper function which
+    //runs the add function and increments our count variable
+    count++;
+    //we return our add function which we use the apply method
+    //which passes in an array of all the arguments that the user passes in to the add function
+    //since we don't care about the environment of the object calling the add function
+    //we simply pass in null since it isn't important in running the function
+    return add.apply(null, arguments);
+  }
+  
+  wrapper.callCount = function(){
+    //a call to callCount() gives us the current value of count
+    return count;
+  };
+  return wrapper;
+}
+
+
+var Add = countDecorator(Add);
+
+
+</script>

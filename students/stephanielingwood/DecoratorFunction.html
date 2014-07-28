@@ -1,0 +1,18 @@
+<script>
+
+var callCount = 0
+var countDecorator = function() {
+	callCount++
+	console.log(callCount);
+}
+
+var add = function(x, y, callback) {
+	callback();
+	return x + y;
+}
+
+add(1, 1, countDecorator);
+
+add(2, 2, countDecorator);
+
+</script>

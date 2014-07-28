@@ -1,0 +1,28 @@
+<script src="lodash.js"></script>
+<script>
+
+var people = [ { name: 'Hank', age: 29, parent: 'Don' }, { name: 'Deborah', age: 30, parent: 'Don' }, { name: 'Danny', age: 24, parent: 'Don' }, { name: 'Don', age: 64, parent: 'Haskell' }, { name: 'Kathy', age: 75, parent: 'Lenora' }, { name: 'Haskell', parent: 'Finus' }, { name: 'Finus' } ]; 
+
+function oldestAge (people) {
+	var find =  _.max(people, 'age').age;
+	return find;
+}
+
+console.log(oldestAge(people));
+
+function living(people) {
+	var alive = _.filter(people, 'age');
+	var name = _.pluck(alive, 'name');
+	return name;
+}
+
+console.log(living(people));
+
+function oldestLivingPerson(people) {
+	var find = _.max(people, 'age').name;
+	return find;
+}
+
+console.log(oldestLivingPerson(people));
+
+</script>
